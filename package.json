@@ -1,29 +1,38 @@
 {
-  "name": "personal_2.0",
-  "version": "1.0.0",
-  "description": "Landing page personal ",
+  "name": "project_scaffold",
+  "version": "0.0.2",
+  "description": "Project Scaffold",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -a localhost -p 8000 -o"
   },
   "keywords": [
-    "personal",
-    "web"
+    "project",
+    "scaffold"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VictorDeAndres/project_scaffold"
+  },
   "author": "Victor de Andres",
   "license": "ISC",
   "devDependencies": {
     "clean-css": "^3.4.18",
     "gulp": "^3.9.1",
+    "gulp-bump": "^2.2.0",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.10",
     "gulp-if": "^2.0.1",
     "gulp-inject": "^4.1.0",
+    "gulp-manifest": "^0.1.1",
+    "gulp-ng-constant": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.3",
     "gulp-useref": "^3.1.0",
     "gulp-webserver": "^0.9.1",
-    "http-server": "^0.9.0"
+    "http-server": "^0.9.0",
+    "merge-stream": "^1.0.0"
   }
 }

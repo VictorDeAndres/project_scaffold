@@ -16,7 +16,7 @@ gulp.task('clean', function(){
 
 gulp.task('manifest', function(){
 	return gulp
-		.src(['public/*'], { base: './../' })
+		.src(['public/*'], { base: './' })
 		.pipe(manifest({
 			hash: true,
 			preferOnline: true,
@@ -31,7 +31,7 @@ gulp.task('manifest', function(){
 // Launch
 gulp.task('build', function () {
     return gulp
-    	.src('./../app/*.html')
+    	.src('./app/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', cleanCss()))

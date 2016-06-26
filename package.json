@@ -1,6 +1,6 @@
 {
   "name": "project_scaffold",
-  "version": "0.0.2",
+  "version": "0.2.1",
   "description": "Project Scaffold",
   "main": "index.js",
   "scripts": {

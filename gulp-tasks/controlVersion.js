@@ -8,28 +8,28 @@ var gulp = require('gulp'),
 
 gulp.task('bump', function(){
 	return gulp
-		.src('./../app/config.json')
+		.src(['./config.json','./package.json'])
 		.pipe(bump())
-		.pipe(gulp.dest('./app'));
+		.pipe(gulp.dest('./'));
 })
 
 gulp.task('bump:minor', function(){
 	return gulp
-		.src('./../app/config.json')
+		.src(['./config.json','./package.json'])
 		.pipe(bump({type:'minor'})) 
-		.pipe(gulp.dest('./app'));
+		.pipe(gulp.dest('./'));
 })
 
 gulp.task('bump:major', function(){
 	return gulp
-		.src('./app/config.json')
+		.src(['./config.json','./package.json'])
 		.pipe(bump({type:'minor'})) 
-		.pipe(gulp.dest('./app'));
+		.pipe(gulp.dest('./'));
 })
 
 
 gulp.task('updateVersion', ['bump'], function() {
-    var configJson = require('./../app/config.json');
+    var configJson = require('./config.json');
     return ngConstant({
             constants: configJson,
             stream: true,
@@ -40,7 +40,7 @@ gulp.task('updateVersion', ['bump'], function() {
 });
 
 gulp.task('updateVersion:minor', ['bump:minor'], function() {
-    var configJson = require('./app/config.json');
+    var configJson = require('./config.json');
     return ngConstant({
             constants: configJson,
             stream: true,
@@ -51,7 +51,7 @@ gulp.task('updateVersion:minor', ['bump:minor'], function() {
 });
 
 gulp.task('updateVersion:major', ['bump:major'], function() {
-    var configJson = require('./../app/config.json');
+    var configJson = require('./config.json');
     return ngConstant({
             constants: configJson,
             stream: true,

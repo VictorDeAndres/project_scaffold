@@ -1,23 +1,38 @@
 <!DOCTYPE HTML>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titulo</title>
-    <!-- build:css css/assestes.css -->
-    <!-- inject:css -->
 
+    <!-- bower:css -->
+    <!-- endbower -->
+
+    <!-- build:css css/app.css -->
+    <!-- inject:app:css -->
     <!-- endinject -->
     <!-- endbuild -->
 
   </head>
   <body>
 
-    <!-- build:js js/assets.js -->
-    <!-- inject:js -->
+    <!-- bower:js -->
+    <!-- endbower -->
 
+    <!-- inject:lib:js -->
+    <!-- endinject -->
+
+    <!-- Wrapper -->
+    <div class="container-fluid">
+        <div ng-view></div>
+    </div>
+    <!-- eof wrapper -->    
+
+    <!-- build:js js/app.js -->
+    <!-- inject:app:js -->
     <!-- endinject -->
     <!-- endbuild -->
+
 
   </body>
 </html>

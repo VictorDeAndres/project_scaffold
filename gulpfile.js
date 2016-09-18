@@ -13,9 +13,3 @@ gulp.task('webserver', function() {
 		}));
 });
 
-// Watch
-gulp.task('watch', function(){
-	gulp.watch('./app/sass/**/*.scss', ['sass']);
-	gulp.watch('./app/css/**/*.css', ['inject']);
-});
-

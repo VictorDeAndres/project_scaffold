@@ -11,21 +11,21 @@ gulp.task('bump', function(){
 		.src(['./config.json','./package.json'])
 		.pipe(bump())
 		.pipe(gulp.dest('./'));
-})
+});
 
 gulp.task('bump:minor', function(){
 	return gulp
 		.src(['./config.json','./package.json'])
 		.pipe(bump({type:'minor'})) 
 		.pipe(gulp.dest('./'));
-})
+});
 
 gulp.task('bump:major', function(){
 	return gulp
 		.src(['./config.json','./package.json'])
 		.pipe(bump({type:'minor'})) 
 		.pipe(gulp.dest('./'));
-})
+});
 
 
 gulp.task('updateVersion', ['bump'], function() {
